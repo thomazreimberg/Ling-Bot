@@ -13,5 +13,5 @@ module.exports = async (client, member) => {
     .setFooter('KETwitch 🦇')
     .setTimestamp();
 
-  member.guild.channels.get(process.env.LEAVECHANNEL).send(message).catch();
+  member.guild.channels.cache.get(process.env.LEAVECHANNEL).send(message).catch();
 }
