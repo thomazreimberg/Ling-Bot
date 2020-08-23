@@ -7,13 +7,13 @@ module.exports = {
 
   run: (client, message, args) => {
     /** Objeto embed que irá ser enviado. */
-    const embed = {
+    const embed = { //#c06ff3
       color: 0xB1103C,
       title: 'Minha lista de comandos',
-      description: '[Clique aqui para ir até o repositório onde estou =)](https://github.com/Liga-dos-Programadores/Project-A)',
+      description: '',
       timestamp: new Date(),
       footer: {
-        text: '2020 ®Liga dos Programadores'
+        text: 'KETwitch 🦇'
       },
       fields: []
     }

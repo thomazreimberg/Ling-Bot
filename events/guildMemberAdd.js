@@ -15,10 +15,10 @@ module.exports = async (client, member) => {
   const message = new Discord.RichEmbed()
     .setThumbnail(member.user.displayAvatarURL)
     .setColor('RANDOM')
-    .setAuthor('👋 Bem-vindo(a) a Liga dos Programadores!')
+    .setAuthor('👋 Bem-vindo(a) a KETwitch 🦇!')
     .setTitle('Tire duvidas e compartilhe conhecimentos!')
     .setDescription(`${member}, vá em <#701166972003549244> e leia os tópicos.`)
-    .setFooter('2020 ©Liga dos Programadores')
+    .setFooter('KETwitch 🦇')
     .setTimestamp()
 
   const join = new Discord.RichEmbed()
@@ -26,7 +26,7 @@ module.exports = async (client, member) => {
     .setColor('RANDOM')
     .setAuthor('✨ Um novo membro entrou no servidor!')
     .setDescription(`${member} acabou de entrar.`)
-    .setFooter('2020 ©Liga dos Programadores')
+    .setFooter('KETwitch 🦇')
     .setTimestamp()
 
   member.guild.channels.get(process.env.JOINCHANNEL).send(join).catch()

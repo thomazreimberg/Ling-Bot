@@ -10,7 +10,7 @@ module.exports = async (client, member) => {
     .setColor('RANDOM')
     .setAuthor('👤 Um membro saiu do servidor!')
     .setDescription(`${member} acabou de sair.`)
-    .setFooter('2020 ©Liga dos Programadores')
+    .setFooter('KETwitch 🦇')
     .setTimestamp()
 
   member.guild.channels.get(process.env.LEAVECHANNEL).send(message).catch()
