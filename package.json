@@ -1,0 +1,22 @@
+{
+  "name": "ling-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomazreimberg/Ling-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomazreimberg/Ling-Bot/issues"
+  },
+  "homepage": "https://github.com/thomazreimberg/Ling-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
