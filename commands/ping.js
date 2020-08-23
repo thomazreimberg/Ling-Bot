@@ -3,9 +3,10 @@ const Discord = require('discord.js')
 module.exports = {
 
   run: async (client, message, args) => {
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
       .setAuthor(`🏓 ${Math.round(client.ping)}ms`)
       .setColor(message.member ? message.member.displayColor : global.CLIENT_DEFAULT_COLOR)
+      .setFooter("KETwitch 🦇", client.user.displayAvatarURL);
 
     message.channel.send(embed)
   },

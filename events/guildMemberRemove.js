@@ -5,13 +5,13 @@ const Discord = require('discord.js')
  */
 
 module.exports = async (client, member) => {
-  const message = new Discord.RichEmbed()
+  const message = new Discord.MessageEmbed()
     .setThumbnail(member.user.displayAvatarURL)
     .setColor('RANDOM')
     .setAuthor('👤 Um membro saiu do servidor!')
     .setDescription(`${member} acabou de sair.`)
     .setFooter('KETwitch 🦇')
-    .setTimestamp()
+    .setTimestamp();
 
-  member.guild.channels.get(process.env.LEAVECHANNEL).send(message).catch()
+  member.guild.channels.get(process.env.LEAVECHANNEL).send(message).catch();
 }

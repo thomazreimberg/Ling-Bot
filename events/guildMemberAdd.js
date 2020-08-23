@@ -12,7 +12,7 @@ module.exports = async (client, member) => {
   const domaincount = member.user.username.match(/\b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b/)
   if (domaincount > 0 && (isDefaultAvatar || daysSinceCreation < 3)) return (() => { member.send('Olá! você foi kickado automaticamente por suspeita de divulgação em nosso servidor. Contas com menos de 3 dias no discord não podem ter domínios (exemplo twitter.com)').catch(); member.kick('Autokick: Selfbots não são bem vindos').catch() })()
 
-  const message = new Discord.RichEmbed()
+  const message = new Discord.MessageEmbed()
     .setThumbnail(member.user.displayAvatarURL)
     .setColor('RANDOM')
     .setAuthor('👋 Bem-vindo(a) a KETwitch 🦇!')
@@ -21,7 +21,7 @@ module.exports = async (client, member) => {
     .setFooter('KETwitch 🦇')
     .setTimestamp()
 
-  const join = new Discord.RichEmbed()
+  const join = new Discord.MessageEmbed()
     .setThumbnail(member.user.displayAvatarURL)
     .setColor('RANDOM')
     .setAuthor('✨ Um novo membro entrou no servidor!')

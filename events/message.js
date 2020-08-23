@@ -6,7 +6,7 @@ module.exports = async (client, message) => {
   /** É uma boa pratica ignorar outros bots. isso faz o bot se auto-ignorar também.
    * E Também não entrara em um loop de spam...
    */
-  if (message.author.bot) return
+  if (message.author.bot) return    
 
   // Checamos se a mensagem é do canal #apresente-se
   if (message.channel.id === process.env.APRESENTACAO) {
