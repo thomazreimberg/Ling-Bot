@@ -8,6 +8,7 @@ module.exports = async (client, message) => {
    */
   if (message.author.bot) return
   if (message.author.type === 'dm') return
+  if (message.content.startsWith(`<@!${client.user.id}`) || message.content.startsWith(`<@${client.user.id}`)) return
 
   // Checamos se a mensagem é do canal #apresente-se
   if (message.channel.id === process.env.APRESENTACAO) {
@@ -49,7 +50,7 @@ module.exports = async (client, message) => {
   /**
    * Responde caso algum user mande mensagem
    */
-  if (message.channel.id === process.env.CHAT) {
+  if (message.channel.id === process.env.CHAT || message.channel.id === "709085150570610768") {
     let constains = false;
     const greatings = ['ba dia', 'bom dia', 'bom dia!', 'ba dia!', 'ba diaa', 'ba diaa!', 'bom diaa', 'bom diaa!'];
 
@@ -62,7 +63,7 @@ module.exports = async (client, message) => {
     if (constains == true){
         message.channel.send('ba diaa senpai! 💟💟');
     } else {
-        return
+      //nada acontece
     }
   }
 
