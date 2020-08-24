@@ -6,9 +6,9 @@ const Discord = require('discord.js')
 
 module.exports = async (client, member) => {
   const message = new Discord.MessageEmbed()
-    .setThumbnail(member.user.displayAvatarURL)
+    .setThumbnail(member.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
     .setColor('RANDOM')
-    .setAuthor('👤 Um membro saiu do servidor!')
+    .setAuthor('👤 Um membro saiu do bando.')
     .setDescription(`${member} acabou de sair.`)
     .setFooter('KETwitch 🦇')
     .setTimestamp();
