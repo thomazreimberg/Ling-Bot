@@ -6,7 +6,8 @@ module.exports = async (client, message) => {
   /** É uma boa pratica ignorar outros bots. isso faz o bot se auto-ignorar também.
    * E Também não entrara em um loop de spam...
    */
-  if (message.author.bot) return    
+  if (message.author.bot) return
+  if (message.author.type === 'dm') return
 
   // Checamos se a mensagem é do canal #apresente-se
   if (message.channel.id === process.env.APRESENTACAO) {
@@ -45,11 +46,25 @@ module.exports = async (client, message) => {
     await message.react('✅')
     return
   }
-
-  /** Outra boa pratica é ignorar qualquer mensagem que não começe com o prefixo escolhido do bot.
-   * OBS: O PREFIXO E PEGO ATRAVES DAS CONFIGURAÇÕES EM client.settings.
+  /**
+   * Responde caso algum user mande mensagem
    */
-  if (message.content.indexOf(process.env.PREFIX) !== 0) return
+  if (message.channel.id === process.env.CHAT) {
+    let constains = false;
+    const greatings = ['ba dia', 'bom dia', 'bom dia!', 'ba dia!', 'ba diaa', 'ba diaa!', 'bom diaa', 'bom diaa!'];
+
+    for (var i = 0; i < greatings.length; i++) {
+      if (message.content.includes(greatings[i])) {
+        constains = true;
+      }
+    }
+    
+    if (constains == true){
+        message.channel.send('ba diaa senpai! 💟💟');
+    } else {
+        return
+    }
+  }
 
   /** Então nós separamos o nome do comando de seus argumentos que são passados ao comando em si. */
   const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g)

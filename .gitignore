@@ -1,5 +1,6 @@
 # Node build artifacts
-node_modules
-npm-debug.log
+node_modules/
+npm-debug.log/
+package-lock.json/
 # DotEnv
-#.inv (tira o #)
+.env/
