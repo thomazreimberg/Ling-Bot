@@ -50,12 +50,15 @@ module.exports = async (client, message) => {
   /**
    * Responde caso algum user mande mensagem
    */
-  if (message.channel.id === process.env.CHAT || message.channel.id === "709085150570610768") {
+  if (message.channel.id === process.env.CHAT || message.channel.id === "709085150570610768" || message.channel.id === "651819350273294336" ||
+      message.channel.id === "695392882319687762") {
     let constains = false;
-    const greatings = ['ba dia', 'bom dia', 'bom dia!', 'ba dia!', 'ba diaa', 'ba diaa!', 'bom diaa', 'bom diaa!'];
+    const greatings = ['ba dia', 'bom dia', 'bom dia!', 'ba dia!', 'ba diaa', 'ba diaa!', 'bom diaa', 'bom diaa!', 'bom diaaaa', 'buenos dias',
+                       'buenos dias!'];
 
     for (var i = 0; i < greatings.length; i++) {
-      if (message.content.includes(greatings[i])) {
+      let msg = message.content;
+      if (msg.toLowerCase().includes(greatings[i])) {
         constains = true;
       }
     }
