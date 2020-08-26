@@ -2,5 +2,10 @@
 node_modules/
 npm-debug.log/
 package-lock.json/
+
 # DotEnv
 .env/
+
+# Database
+/src/database.sqlite
+/src/database.sqlite-journal
