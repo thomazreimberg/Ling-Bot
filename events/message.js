@@ -85,7 +85,6 @@ module.exports = async (client, message) => {
   let nk_user = message.author.username
   let nm_command = cmd.help.name;
   let dt_executed = new Date();
-  console.log(dt_executed);
 
   console.log('log', `${nk_user} (${id_user}) executou o comando: ${nm_command}`);
   await connection('tb_log').insert({
