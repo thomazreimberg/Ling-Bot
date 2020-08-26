@@ -4,7 +4,7 @@ exports.up = function(knex) {
         table.string('id_user').notNullable();
         table.string('nk_user').notNullable();
         table.string('nm_command').notNullable();
-        table.string('dt_executed').notNullable();
+        table.datetime('dt_executed').notNullable();
     })
   };
   
