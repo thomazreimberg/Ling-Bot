@@ -9,7 +9,7 @@ exports.up = function(knex) {
         table.boolean('tg_emote');
         table.boolean('tg_mod');
         table.boolean('tg_subscriber');
-        table.datetime('dt_executed').notNullable();
+        table.string('dt_executed').notNullable();
     })
 };
   

@@ -10,7 +10,7 @@ module.exports = {
         let tg_emote = request.emotes;
         let tg_mod = request.mod;
         let tg_subscriber = request.subscriber;
-        let dt_executed = new Date();
+        let dt_executed = new Date().toString();
         
         await connection('tb_logtwitch').insert({
             id,
